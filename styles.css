@@ -12,17 +12,21 @@ body::-webkit-scrollbar {
     display: none;
   }
 
+  /* Navbar */
+
 .navbar{
-    position: fixed;
+    position: sticky;
     top: 0;
     left: 0;
+    z-index: 1000;
+    overflow: hidden;
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
     background-color: white;
     padding: 20px 90px;
-    z-index: 1000;
+    box-shadow: 0px 4px 10px rgba(201, 201, 201, 0.1);
 }
 .logo{
     display: flex;
@@ -71,3 +75,176 @@ body::-webkit-scrollbar {
     background: #5978FF;
     color: white;
 }
+
+/*  Page-a  */
+
+.page-a{
+    display: flex;
+    padding: 130px 70px;
+    padding-top: 130px;
+    background-image: linear-gradient(to right, rgba(249, 211, 230, 0.3), rgba(180, 225, 227, 0.3));
+}
+.text-sec{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    max-width: 50%;
+}
+.text-sec h1{
+    font-size: 48px;
+    color: #121214;
+    font-weight: 700;
+}
+.curvyline{
+    position: relative;
+    left: 270px;
+    bottom: 30px;
+}
+.text-sec p {
+    position: relative;
+    bottom: 20px;
+    font-size: 18px;
+    font-weight: 400;
+    color: #121214;
+    line-height: 1.6;
+    max-width: 80%;
+}
+.features{
+    display: flex;
+    flex-wrap: wrap;
+    font-weight: 400;
+    color: #555555;
+    font-size: 1em;
+    gap: 25px;
+}
+
+.icon {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+.explore-button{
+    margin-top: 30px;
+    max-width: 25%;
+    border-radius: 12px;
+    border: none;
+    background-color: #5978FF;
+    color: white;
+    font-size: 16px;
+    font-weight: 400;
+    padding: 18px 20px;
+    cursor: pointer;
+}
+.explore-button:hover{
+    background-color: #445dcb;
+    transition: 0.3s;
+}
+
+
+
+
+.image-sec {
+    position: relative;
+    width: 60%; 
+    max-width: 1600px; 
+    top: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+.image-sec img {
+    width: 100%; 
+    height: auto;
+    position: relative;
+    right: 50px;
+}
+
+/*....Responsive....*/
+
+@media (max-width: 1500px){
+.explore-button{
+    margin-top: 30px;
+    max-width: 35%;
+}
+}
+@media (max-width: 1300px) {
+    
+.text-sec h1{
+    font-size: 40px;
+}
+.curvyline{
+    position: relative;
+    left: 200px;
+    bottom: 30px;
+}
+.text-sec p {
+    position: relative;
+    bottom: 20px;
+    font-size: 15px;
+}
+}
+
+@media (max-width: 1200px) {
+    .page-a {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .text-sec, .image-sec {
+        width: 100%;
+    }
+    .curvyline {
+        left: auto;
+    }
+    .text-sec p {
+        max-width: 100%;
+    }
+    .image-sec img {
+        max-width: 80%; 
+    }
+    .image-sec {
+        position: static; 
+        width: 80%;
+        margin-top: 20px;
+    }
+    .featurs{
+        position: relative;
+        left:50px;
+    }
+    .explore-button{
+        position: relative;
+        max-width: 45%;
+        left: 110px;
+    }
+}
+
+
+
+@media (max-width: 768px) { 
+    .text-sec h1 {
+        font-size: 30px; 
+    }
+
+    .text-sec {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .curvyline {
+        width: 180px; 
+    }
+
+    .features {
+        justify-content: center;
+        text-align: center;
+    }
+
+    .explore-button {
+        max-width: 80%;
+    }
+
+    .image-sec {
+        width: 100%;
+    }
+}
+
